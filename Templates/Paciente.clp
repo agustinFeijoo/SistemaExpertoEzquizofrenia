@@ -1,0 +1,11 @@
+(deftemplate Paciente
+(field Fase)
+(field Duracion)
+(field PoseeTrastorno)
+(field EnfermedadMedica)
+(field TipoEnfermedadMedica)
+(field Drogas)
+(multifield TipoDroga)
+(field EfectoExcesivo)
+(field Limpio)
+)

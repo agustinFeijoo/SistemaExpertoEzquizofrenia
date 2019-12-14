@@ -1,0 +1,3 @@
+(deftemplate Esquizofrenia
+(field Presenta)
+)

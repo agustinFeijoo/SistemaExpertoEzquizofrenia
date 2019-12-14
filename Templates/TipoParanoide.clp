@@ -1,0 +1,3 @@
+(deftemplate TipoParanoide
+(field Presenta)
+)

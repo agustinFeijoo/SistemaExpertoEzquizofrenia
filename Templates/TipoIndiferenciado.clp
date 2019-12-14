@@ -1,0 +1,3 @@
+(deftemplate TipoIndiferenciado
+(field Presenta)
+)
