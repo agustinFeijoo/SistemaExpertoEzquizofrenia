@@ -1,0 +1,20 @@
+(deftemplate Sintomas
+(field IdeasDelirantes)
+(field TipoIdeasDelirantes)
+(field Alucinaciones)
+(field LenguajeDesorganizado)
+(field ComportamientoCatatonico)
+(field ComportamientoDesorganizado)
+(field SintomasNegativos)
+(field CantidadSintomas)
+(field TratadoConExito)
+(field DuracionSintoma)
+(field CumpleCriterioA)
+(field DisfuncionSocial)
+(field EpisodiosAnimicos)
+(field DuracionEpisodio)
+(field TrastornoDeDesarrollo)
+(field Atenuados)
+)
+
+

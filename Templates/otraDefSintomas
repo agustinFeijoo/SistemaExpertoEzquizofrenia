@@ -1,0 +1,70 @@
+(defrule EstablecerCumplimientoCriterioA
+           
+                  (Sintomas CantidadSintomas yes)
+                  (Sintomas IdeasDelirantes yes)
+                  (Sintomas TipoIdeasDelirantes no)
+                  (Sintomas DuracionSintoma yes)
+                  (Sintomas Atenuados no)
+      =>
+            (assert
+(Sintomas CumpleCriterioA yes)))
+
+o 
+
+(defrule EstablecerCumplimientoCriterioA
+           (Sintomas
+                  (CantidadSintomas yes)
+                  (IdeasDelirantes yes)
+                  (TipoIdeasDelirantes no)
+                  (DuracionSintoma yes)
+                  (Atenuados no))           
+      =>
+            (assert
+(Sintomas CumpleCriterioA yes)))
+
+
+
+
+
+;Defino estructura de datos de Sintomas
+(deftemplate Sintomas
+  (slot IdeasDelirantes (type SYMBOL) (allowed-values yes no))
+  (slot TipoIdeasDelirantes (type SYMBOL) (allowed-values yes no))
+  (slot Alucinaciones (type SYMBOL) (allowed-values yes no))
+  (slot LenguajeDesorganizado (type SYMBOL) (allowed-values yes no))
+  (slot ComportamientoCatatonico (type SYMBOL) (allowed-values yes no))
+  (slot ComportamientoDesorganizado (type SYMBOL) (allowed-values yes no))
+  (slot SintomasNegativos (type SYMBOL) (allowed-values yes no)) 
+  (slot CantidadSintomas (type SYMBOL) (allowed-values yes no)) 
+  (slot TratadoConExito (type SYMBOL) (allowed-values yes no))
+  (slot DuracionSintoma (type SYMBOL) (allowed-values yes no)) 
+  (slot CumpleCriterioA (type SYMBOL) (allowed-values yes no))  
+  (slot DisfuncionSocial (type SYMBOL) (allowed-values yes no))  
+  (slot EpisodiosAnimicos (type SYMBOL) (allowed-values yes no))  
+  (slot DuracionEpisodio (type SYMBOL) (allowed-values yes no))  
+  (slot TrastornoDeDesarrollo (type SYMBOL) (allowed-values yes no))  
+  (slot Atenuados (type SYMBOL) (allowed-values yes no))  
+)
+
+
+
+(deftemplate Sintomas
+(slot IdeasDelirantes)
+(slot TipoIdeasDelirantes)
+(slot Alucinaciones)
+(slot LenguajeDesorganizado)
+(slot ComportamientoCatatonico)
+(slot ComportamientoDesorganizado)
+(slot SintomasNegativos)
+(slot CantidadSintomas)
+(slot TratadoConExito)
+(slot DuracionSintoma)
+(slot CumpleCriterioA)
+(slot DisfuncionSocial)
+(slot EpisodiosAnimicos)
+(slot DuracionEpisodio)
+(slot TrastornoDeDesarrollo)
+(slot Atenuados)
+)
+
+
