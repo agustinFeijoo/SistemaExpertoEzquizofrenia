@@ -5,4 +5,5 @@
 (field NegativismoExtremoOMutismo)
 (field PosturasOMovimientosExtranos)
 (field EcolaliaOEcopraxia)
+(field Presenta)
 )

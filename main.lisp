@@ -1,4 +1,5 @@
-(load "Funciones/loadTemplates.clp")
+(load "Functions/loadTemplates.clp")
 (loadTemplates)
-(deffunction )
+(load "Functions/loadRules.clp")
+(loadRules)
 

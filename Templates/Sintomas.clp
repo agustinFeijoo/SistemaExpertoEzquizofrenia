@@ -2,6 +2,7 @@
 (field IdeasDelirantes)
 (field TipoIdeasDelirantes)
 (field Alucinaciones)
+(field Episodio)
 (field LenguajeDesorganizado)
 (field ComportamientoCatatonico)
 (field ComportamientoDesorganizado)
@@ -9,12 +10,12 @@
 (field CantidadSintomas)
 (field TratadoConExito)
 (field DuracionSintoma)
-(field CumpleCriterioA)
 (field DisfuncionSocial)
 (field EpisodiosAnimicos)
 (field DuracionEpisodio)
-(field TrastornoDeDesarrollo)
+(field TrastornoDesarrollo)
 (field Atenuados)
+(field AplanamientoAfectivo)
 )
 
 
