@@ -3,3 +3,5 @@
 (load "Functions/loadRules.clp")
 (loadRules)
 
+(deffunction main()
+ printout
