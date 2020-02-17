@@ -14,7 +14,7 @@
 	))
 	(Paciente
 		(CumpleCriterioA si) 
-		(Duracion ?d & :(< ?d 6))
+		(Duracion ?d & :(> ?d 6))
 		(Limpio si)
 	)
 )
