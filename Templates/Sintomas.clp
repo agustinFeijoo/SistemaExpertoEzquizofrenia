@@ -2,7 +2,6 @@
 (field IdeasDelirantes)
 (field TipoIdeasDelirantes)
 (field Alucinaciones)
-(field Episodio)
 (field LenguajeDesorganizado)
 (field ComportamientoCatatonico)
 (field ComportamientoDesorganizado)

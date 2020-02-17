@@ -1,7 +1,11 @@
-(load "Functions/loadTemplates.clp")
-(loadTemplates)
-(load "Functions/loadRules.clp")
-(loadRules)
-
 (deffunction main()
- printout
+	(load "Functions/loadTemplates.clp")
+	(loadTemplates)
+	(load "Functions/loadRules.clp")
+	(loadRules)
+ 
+
+	printout "pepe"
+)
+
+(main())

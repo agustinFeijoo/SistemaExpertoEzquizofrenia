@@ -18,4 +18,5 @@
 (field TrastornPsicoticoDebidoASustancias)
 (field ConcienteDeAlucinacionesPorSustancia)
 (field MomentoEpisodio)
+(field EfectoExcesivo)
 )
