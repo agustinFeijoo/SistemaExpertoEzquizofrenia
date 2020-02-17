@@ -5,11 +5,12 @@
 
 		(DisfuncionSocial si)
 		(TrastornoDesarrollo si)
-		(EpisodiosAnimicos si)
+		(EpisodiosAnimicos no)
 	)
 	(Sintomas
 		(DisfuncionSocial si)
 		(TrastornoDesarrollo si)
+		(EpisodiosAnimicos si)
 		(DuracionEpisodio breve)
 	))
 	(Paciente
