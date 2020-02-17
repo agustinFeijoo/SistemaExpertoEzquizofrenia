@@ -36,7 +36,10 @@
 	)
 	(Paciente
 		(CumpleCriterioA si) 
-		(Duracion ?d & :(> ?d 6))
+		(and
+			(Duracion ?d & :(> ?d 6))
+			(Sintomas (DuracionSintoma ?ds & :(> ?ds 30)))
+		)
 		(Limpio si)
 	)
 )
