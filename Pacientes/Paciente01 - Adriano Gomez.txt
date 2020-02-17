@@ -1,0 +1,21 @@
+(assert
+	(Sintomas
+		(ComportamientoCatatonico si)
+		(SintomasNegativos si)
+		(DisfuncionSocial si)
+		(DuracionSintoma 45)
+	)
+	
+	(Paciente
+		(Enfermedad no)
+		(Drogas no)
+		(EfectoExcesivo no)
+		(Duracion 8)
+	)
+	
+	(TipoCatatonico
+		(InmovilidadCataplesiaOStupor si)
+		(NegativismoExtremoOMutismo si)
+		(PosturasOMovimientosExtranos si)
+	)
+)
