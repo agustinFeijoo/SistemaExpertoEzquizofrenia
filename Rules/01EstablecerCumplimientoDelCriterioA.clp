@@ -12,7 +12,7 @@
                   (TipoIdeasDelirantes extranas)
                   (DuracionSintoma ?DSintoma & :(< ?DSintoma 15))
                   (Atenuados no)
-		  (TratadoConExito no))
+		  (TratadoConExito si))
 	   (Sintomas
 		(CantidadSintomas ?CSintomas & :(> ?CSintomas 1))
 		(DuracionSintoma ?DSintoma & :(> ?DSintoma 15) & :(< ?DSintoma 30))
