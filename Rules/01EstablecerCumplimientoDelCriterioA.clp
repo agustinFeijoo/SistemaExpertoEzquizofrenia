@@ -1,4 +1,5 @@
 ﻿(defrule EstablecerCumplimientoCriterioA
+	(declare (salience 1000))
 	(or
            (Sintomas
                   (CantidadSintomas 1)

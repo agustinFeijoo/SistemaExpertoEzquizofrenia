@@ -1,47 +1,49 @@
 (defrule EstablecerSintomasEsquizofrenia
+(declare (salience 900)) 
 (and
 	(or
-		(Sintomas
+		(Sintomas (DisfuncionSocial si))
 
-			(DisfuncionSocial si)
 			(or
-				(EpisodiosAnimicos no)
+				(Sintomas (EpisodiosAnimicos no))
 				(and
+					(Sintomas 
 					(EpisodiosAnimicos si)
-					(DuracionEpisodio breve)
+					(DuracionEpisodio BREVE))					
 				)
 			)
 
 			(or
-				(TrastornoDesarrollo no)	
+				(Sintomas (TrastornoDesarrollo no))	
 				(and
-					(TrastornoDesarrollo si)
+					(Sintomas (TrastornoDesarrollo si))
 					(and
 						(or
+							(Sintomas 
 							(IdeasDelirantes si)
-							(Alucinaciones si)
+							(Alucinaciones si))							
 						)
+
 						(or
-							(DuracionSintoma ?ds & :(> ?ds 30))
-							(
+							(Sintomas (DuracionSintoma ?ds & :(> ?ds 30)))
+							(and
+								(Sintomas 
 								(DuracionSintoma ?ds & :(< ?ds 30))
-								(TratadoConExito si)
+								(TratadoConExito si))
 							)
 						)
 					)
 				)
-			)
-
-		)	
+			)	
 	)
-	(Paciente
-		(CumpleCriterioA si) 
-		(and
-			(Duracion ?d & :(> ?d 6))
-			(Sintomas (DuracionSintoma ?ds & :(> ?ds 30)))
-		)
-		(Limpio si)
+	
+	(Paciente (CumpleCriterioA si)) 
+	(and
+		(Paciente (Duracion ?d & :(> ?d 6)))
+		(Sintomas (DuracionSintoma ?ds & :(> ?ds 30)))
 	)
+	(Limpio si)
+	
 )
 	=>
 	(assert (Esquizofrenia (Presenta si))))
