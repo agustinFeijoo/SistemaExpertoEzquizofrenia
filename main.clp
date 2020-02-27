@@ -1,11 +1,12 @@
 (deffunction main()
 	(load "Functions/loadTemplates.clp")
-	(loadTemplates)
 	(load "Functions/loadRules.clp")
-	(loadRules)
- 
-
-	printout "pepe"
 )
 
-(main())
+(deffunction exec()
+
+	(loadTemplates)
+	(load "Pacientes/Paciente01 - Adriano Gomez.clp")
+	(loadRules)
+
+)

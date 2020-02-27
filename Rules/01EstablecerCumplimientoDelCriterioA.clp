@@ -1,5 +1,8 @@
 ﻿(defrule EstablecerCumplimientoCriterioA
 	(declare (salience 1000))
+
+?Paciente <- (Paciente 
+		(Duracion ?d))
 	(or
            (Sintomas
                   (CantidadSintomas 1)
@@ -25,5 +28,7 @@
 		(Atenuados no))
       
      )=>
-            (assert
-(Paciente(CumpleCriterioA si))))
+(modify ?Paciente
+	(CumpleCriterioA si))
+
+)

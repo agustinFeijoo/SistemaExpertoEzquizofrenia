@@ -15,4 +15,8 @@
 	(load "Rules/13EstablecerTrastornoPsicoticoCompartido.clp")
 	(load "Rules/14EstablecerTrastornoPsicoticoDebidoAEnfermedad.clp")
 	(load "Rules/15EstablecerTrastornoDebidoASustancias.clp")
+
+	(load "Rules/Resultados.clp")
+
+	(load "Rules/Cantidades.clp")
 )

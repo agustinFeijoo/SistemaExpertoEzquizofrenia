@@ -36,7 +36,7 @@
 	=>
 	(assert 
 		(Psicotico
-			(TrastornPsicoticoDebidoASustancias si)
+			(TrastornoPsicoticoDebidoASustancias si)
 		)
 	)
 )

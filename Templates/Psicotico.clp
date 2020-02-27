@@ -15,7 +15,7 @@
 (field MismaCondicionQuePersona)
 (field TrastornoPsicoticoDebidoAEnfermedad)
 (field AlteracionesDuranteDelirum)
-(field TrastornPsicoticoDebidoASustancias)
+(field TrastornoPsicoticoDebidoASustancias)
 (field ConcienteDeAlucinacionesPorSustancia)
 (field MomentoEpisodio)
 (field EfectoExcesivo)

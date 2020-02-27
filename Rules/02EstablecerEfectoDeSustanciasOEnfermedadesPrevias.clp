@@ -1,10 +1,12 @@
 (defrule EstablecerEfectoSustanciasOEnfermedadesPrevias
-   	(or
-	(Paciente
-		(Enfermedad si))
-	(Paciente
-		(Drogas si))
-	)		
+   	
+	?Paciente <- (Paciente (Enfermedad ?enf)
+				(Drogas ?dro))
+		
 =>
-	(assert (Paciente
-			(Limpio no))))
+	(if ((eq ?enf si)|(eq ?dro si)) 
+	then
+		(modify ?Paciente (Limpio no))
+	
+	else (modify ?Paciente (Limpio si))
+	)

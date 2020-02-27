@@ -1,27 +1,28 @@
-(deffacts Paciente01
+(deffacts loadInitialValues
 	
 	(Sintomas
 		(IdeasDelirantes no)
 		(Alucinaciones no)
 		(LenguajeDesorganizado no)
-		(ComportamientoCatatonico si)
+		(ComportamientoCatatonico no)
 		(ComportamientoDesorganizado no)
-		(SintomasNegativos si)
+		(SintomasNegativos no)
 		(TratadoConExito no)
-		(DisfuncionSocial si)
+		(DisfuncionSocial no)
 		(EpisodiosAnimicos no)
 		(TrastornoDesarrollo no)
 		(Atenuados no)
 		(AplanamientoAfectivo no)
 		(CantidadSintomas 0)
-		(DuracionSintoma 45)
+		(DuracionSintoma 0)
 	)
 	
 	(Paciente
-		(Duracion 8)
+		(Duracion 0)
 		(Enfermedad no)
 		(Drogas no)
 		(EfectoExcesivo no)
+		(CumpleCriterioA no)
 	)
 
 	(Psicotico
@@ -45,10 +46,10 @@
 	
 	(TipoCatatonico
 		(Presenta no)
-		(InmovilidadCataplesiaOStupor si)
+		(InmovilidadCataplesiaOStupor no)
 		(ActividadMotoraExcesiva no)
-		(NegativismoExtremoOMutismo si)
-		(PosturasOMovimientosExtranos si)
+		(NegativismoExtremoOMutismo no)
+		(PosturasOMovimientosExtranos no)
 		(EcolaliaOEcopraxia no)
 		(CantidadSintomas 0)
 	)

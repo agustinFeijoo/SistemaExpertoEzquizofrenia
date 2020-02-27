@@ -1,5 +1,6 @@
 (defrule EstablecerSintomasEsquizofrenia
 (declare (salience 900)) 
+
 (and
 	(or
 		(Sintomas (DisfuncionSocial si))
@@ -37,12 +38,14 @@
 			)	
 	)
 	
-	(Paciente (CumpleCriterioA si)) 
+	(Paciente 
+		(CumpleCriterioA si)
+		(Limpio si)) 
 	(and
 		(Paciente (Duracion ?d & :(> ?d 6)))
 		(Sintomas (DuracionSintoma ?ds & :(> ?ds 30)))
 	)
-	(Limpio si)
+	
 	
 )
 	=>
