@@ -1,7 +1,0 @@
-(assert
-	(Sintomas
-		(IdeasDelirantes si)
-		(TipoIdeasDelirantes LEVES)
-		(DuracionSintoma 53)
-	)
-)

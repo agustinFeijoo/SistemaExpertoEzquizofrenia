@@ -18,11 +18,16 @@
 	)
 	
 	(Paciente
+		(PoseeTrastorno no)
 		(Duracion 0)
 		(Enfermedad no)
 		(Drogas no)
 		(EfectoExcesivo no)
 		(CumpleCriterioA no)
+	)
+
+	(Esquizofrenia
+		(Presenta no)
 	)
 
 	(Psicotico
@@ -39,7 +44,7 @@
 		(MismaCondicionQuePersona no)
 		(TrastornoPsicoticoDebidoAEnfermedad no)
 		(AlteracionesDuranteDelirum no)
-		(TrastornoPsicoticoDebidoASustancias no)
+		(TrastornPsicoticoDebidoASustancias no)
 		(ConcienteDeAlucinacionesPorSustancia no)
 		(EfectoExcesivo no)
 	)
