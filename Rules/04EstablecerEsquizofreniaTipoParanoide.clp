@@ -3,17 +3,17 @@
 	(or
 	(Sintomas
 		(IdeasDelirantes si)
-		(LenguajeDesorganizado no)
-		(ComportamientoCatatonico no)
-		(ComportamientoDesorganizado no)
-		(AplanamientoAfectivo no)
+		(LenguajeDesorganizado ?Len&~si)
+		(ComportamientoCatatonico ?ComCat&~si)
+		(ComportamientoDesorganizado ?ComDes&~si)
+		(AplanamientoAfectivo ?Aplan&~si)
 		)
 	(Sintomas
 		(Alucinaciones si)
-		(LenguajeDesorganizado no)
-		(ComportamientoCatatonico no)
-		(ComportamientoDesorganizado no)
-		(AplanamientoAfectivo no)
+		(LenguajeDesorganizado ?Len&~si)
+		(ComportamientoCatatonico ?ComCat&~si)
+		(ComportamientoDesorganizado ?ComDes&~si)
+		(AplanamientoAfectivo ?Aplan&~si)
 		)
 	)
 	(Esquizofrenia

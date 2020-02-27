@@ -1,32 +1,20 @@
 (defrule EstablecerTrastornoEsquizoafectivo
 (and
-	(Paciente
+?Paciente<-(Paciente
+		(PoseeTrastorno nil)
 		(CumpleCriterioA si)
-	)
-	(Paciente
 		(Limpio si)
 	)
 	(Sintomas
 		(IdeasDelirantes si)
-	)
-	(Sintomas
-		(SintomasNegativos no)
-	)
-	(Sintomas
-		(DuracionSintoma ?DSintoma & :(> ?DSintoma 15) & :(< ?DSintoma 30))		
-	)	
-	(Sintomas
+		(SintomasNegativos ?SinNeg&~si)
+		(DuracionSintoma ?DSintoma & :(> ?DSintoma 15) & :(< ?DSintoma 30))
 		(EpisodiosAnimicos si)
 	)
+?Psicotico <- (Psicotico (TrastornoEsquizoafectivo ?TEsq&~si))
 	
 )
 	=>
-	(assert 
-		(Psicotico
-			(TrastornoEsquizoafectivo si)
-		)
-		(Paciente
-			(PoseeTrastorno si)
-		)
-	)
+	(modify ?Psicotico (TrastornoEsquizoafectivo si))
+	(modify ?Paciente (PoseeTrastorno si))
 )

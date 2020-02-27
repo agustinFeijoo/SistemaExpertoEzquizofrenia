@@ -1,32 +1,21 @@
 (defrule EstablecerTrastornoPsicoticoCompartido
 (and
-	(Paciente
+?Paciente<-(Paciente
 		(CumpleCriterioA no)
-	)
-	(Paciente
 		(Limpio si)
-	)
-	(Paciente
-		(PoseeTrastorno si)
+		(PoseeTrastorno ?PTras&~si)
 	)
 	(Sintomas
 		(IdeasDelirantes si)
 	)
-	(Psicotico
+?Psicotico <- (Psicotico
 		(PersonaCercanaConCondicion si)
-	)
-	(Psicotico
 		(MismaCondicionQuePersona si)
+		(TrastornoPsicoticoCompartido ?TComp&~si)
 	)	
 	
 )
 	=>
-	(assert 
-		(Psicotico
-			(TrastornoPsicoticoCompartido si)
-		)
-		(Paciente
-			(PoseeTrastorno si)
-		)
-	)
+	(modify ?Psicotico (TrastornoPsicoticoCompartido si))
+	(modify ?Paciente (PoseeTrastorno si))
 )

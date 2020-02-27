@@ -1,13 +1,9 @@
 (defrule EstablecerTrastornoPsicoticoDebidoASustancias
 (and
-	(Paciente
+?Paciente<-(Paciente
 		(CumpleCriterioA si)
-	)
-	(Paciente
-		(Drogas si)
-	)
-	(Paciente
-		(PoseeTrastorno no)
+		(Limpio si)
+		(PoseeTrastorno ?PTras&~si)
 	)
 	(or
 		(Sintomas
@@ -25,18 +21,16 @@
 			(EfectoExcesivo si)
 		)
 	)
-	(Psicotico
-		(ConcienteDeAlucinacionesPorSustancia no)
+?Psicotico <- (Psicotico
+		(ConcienteDeAlucinacionesPorSustancia ?Conc&~si)
+		(TrastornoPsicoticoDebidoASustancias ?TComp&~si)
 	)	
 	(Esquizofrenia
-		(Presenta no)
+		(Presenta ?Pres&~si)
 	)
 	
 )
 	=>
-	(assert 
-		(Psicotico
-			(TrastornoPsicoticoDebidoASustancias si)
-		)
-	)
+	(modify ?Psicotico (TrastornoPsicoticoDebidoASustancias si))
+	(modify ?Paciente (PoseeTrastorno si))
 )

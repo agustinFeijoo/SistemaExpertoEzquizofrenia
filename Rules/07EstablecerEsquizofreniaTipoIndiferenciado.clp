@@ -4,16 +4,19 @@
 		(Presenta si)
 	)
 	(TipoParanoide
-		(Presenta no)
+		(Presenta ?Pres&~si)
 	)
 	(TipoDesorganizado
-		(Presenta no)
+		(Presenta ?Pres&~si)
 	)
 	(TipoCatatonico
-		(Presenta no)
+		(Presenta ?Pres&~si)
+	)
+?TIndif <-(TipoIndiferenciado
+		(Presenta ?Pres&~si)
 	)
 )
 	=>
-	(assert (TipoIndiferenciado
-			(Presenta si)
-		)))
+	(modify ?TIndif (Presenta si))
+
+)

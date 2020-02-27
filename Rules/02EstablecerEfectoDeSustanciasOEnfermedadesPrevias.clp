@@ -1,12 +1,14 @@
 (defrule EstablecerEfectoSustanciasOEnfermedadesPrevias
-   	
-	?Paciente <- (Paciente (Enfermedad ?enf)
-				(Drogas ?dro))
+   	(declare (salience 1000))
+	?Paciente <- (Paciente (Enfermedad ?enf&~nil)
+				(Drogas ?dro&~nil)
+				(Limpio nil))
 		
 =>
-	(if ((eq ?enf si)|(eq ?dro si)) 
+	(if (or (eq ?enf si) (eq ?dro si)) 
 	then
-		(modify ?Paciente (Limpio no))
+	(modify ?Paciente (Limpio no))
 	
 	else (modify ?Paciente (Limpio si))
 	)
+)

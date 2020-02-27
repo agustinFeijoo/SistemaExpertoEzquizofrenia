@@ -2,7 +2,7 @@
 (and
 	(Sintomas
 		(LenguajeDesorganizado si)
-		(ComportamientoCatatonico no)
+		(ComportamientoCatatonico ?ComCat&~si)
 		(ComportamientoDesorganizado si)
 		(AplanamientoAfectivo si)
 	)
@@ -12,9 +12,10 @@
 	(Esquizofrenia
 		(Presenta si)
 	)
+
+?TDesor <- (TipoDesorganizado (Presenta ?Pres&~si))
 )
 	=>
-	(assert
-		(TipoDesorganizado
-			(Presenta si)
-		)))
+	(modify ?TDesor	(Presenta si))
+
+)

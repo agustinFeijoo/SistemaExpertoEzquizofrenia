@@ -1,29 +1,21 @@
 (defrule EstablecerTrastornoPsicoticoBreve
 (and
-	(Paciente
+?Paciente<-(Paciente
+		(PoseeTrastorno nil)
 		(CumpleCriterioA si)
-	)
-	(Paciente
 		(Limpio si)
 	)
 	(Sintomas
-		(SintomasNegativos no)
-	)
-	(Sintomas
+		(SintomasNegativos ?SinNeg&~si)
 		(DuracionSintoma ?DSintoma & :(< ?DSintoma 30))
 	)	
-	(Psicotico
+?Psicotico <-(Psicotico
 		(RecuperacionTotal si)
-	)
+		(TrastornoPsicoticoBreve ?TPsiBreve&~si)
+		)
 	
 )
 	=>
-	(assert 
-		(Psicotico
-			(TrastornoPsicoticoBreve si)
-		)
-		(Paciente
-			(PoseeTrastorno si)
-		)
-	)
+	(modify ?Psicotico (TrastornoPsicoticoBreve si))
+	(modify ?Paciente (PoseeTrastorno si))
 )

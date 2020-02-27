@@ -15,7 +15,7 @@
 			)
 
 			(or
-				(Sintomas (TrastornoDesarrollo no))	
+				(Sintomas (TrastornoDesarrollo ?TDesarr&~si))	
 				(and
 					(Sintomas (TrastornoDesarrollo si))
 					(and

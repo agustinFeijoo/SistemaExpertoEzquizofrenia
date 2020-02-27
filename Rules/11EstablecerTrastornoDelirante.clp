@@ -1,35 +1,20 @@
 (defrule EstablecerTrastornoDelirante
 (and
-	(Paciente
+?Paciente<-(Paciente
+		(PoseeTrastorno nil)
 		(CumpleCriterioA no)
-	)
-	(Paciente
 		(Limpio si)
 	)
 	(Sintomas
 		(IdeasDelirantes si)
-	)
-	(Sintomas
 		(TipoIdeasDelirantes LEVES)
-	)
-	(Sintomas
 		(DuracionSintoma ?DSintoma & :(> ?DSintoma 30))
-	)	
-	(Sintomas
-		(DisfuncionSocial no)
+		(DisfuncionSocial ?Disf&~si)
+		(ComportamientoDesorganizado ?ComDesor&~si)
 	)
-	(Sintomas
-		(ComportamientoDesorganizado no)
-	)
-	
+?Psicotico <- (Psicotico (TrastornoDelirante ?TDel&~si))	
 )
 	=>
-	(assert 
-		(Psicotico
-			(TrastornoDelirante si)
-		)
-		(Paciente
-			(PoseeTrastorno si)
-		)
-	)
+	(modify ?Psicotico (TrastornoDelirante si))
+	(modify ?Paciente (PoseeTrastorno si))
 )

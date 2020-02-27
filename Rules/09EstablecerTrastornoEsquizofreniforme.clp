@@ -1,36 +1,28 @@
 (defrule EstablecerTrastornoEsquizofreniforme
 (and
-	(Paciente
+?Paciente<-(Paciente
+		(PoseeTrastorno nil)
 		(CumpleCriterioA si)
-	)
-	(Paciente
 		(Limpio si)
-	)
-	(Paciente
 		(Duracion ?d & :(> ?d 1) & :(< ?d 6))
 	)
 	(Sintomas
 		(DisfuncionSocial si)
-	)
-	(Sintomas
-		(TrastornoDesarrollo no)
+		(TrastornoDesarrollo ?TDes&~si)
 	)
 	(or
 		(Sintomas
-			(EpisodiosAnimicos no)
+			(EpisodiosAnimicos ?Epis&~si)
 		)
 		(Sintomas
 			(DuracionEpisodio BREVE)
 		)
 	)
+?Psicotico <- (Psicotico (TrastornoEsquizofreniforme ?TEsq&~si))
+	
 )
 	=>
-	(assert 
-		(Psicotico
-			(TrastornoEsquizofreniforme si)
-		)
-		(Paciente
-			(PoseeTrastorno si)
-		)
-	)
+	(modify ?Psicotico (TrastornoEsquizofreniforme si))
+	(modify ?Paciente (PoseeTrastorno si))
+	
 )

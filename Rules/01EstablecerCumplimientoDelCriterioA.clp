@@ -1,5 +1,7 @@
 ﻿(defrule EstablecerCumplimientoCriterioA
-	(declare (salience 1000))
+	;(declare (salience 1000))
+	
+	(Paciente (CumpleCriterioA nil))
 
 ?Paciente <- (Paciente 
 		(Duracion ?d))
@@ -25,7 +27,7 @@
 		(CantidadSintomas ?CSintomas & :(> ?CSintomas 1))
 		(DuracionSintoma ?DSintoma & :(< ?DSintoma 15))
 		(TratadoConExito si)
-		(Atenuados no))
+		(Atenuados ?Aten&~si))
       
      )=>
 (modify ?Paciente

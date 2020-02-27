@@ -1,13 +1,9 @@
 (defrule EstablecerTrastornoPsicoticoDebidoAEnfermedad
 (and
-	(Paciente
+?Paciente<-(Paciente
 		(CumpleCriterioA no)
-	)
-	(Paciente
 		(Enfermedad si)
-	)
-	(Paciente
-		(PoseeTrastorno no)
+		(PoseeTrastorno ?PTras&~si)
 	)
 	(or
 		(Sintomas
@@ -20,15 +16,13 @@
 	(Esquizofrenia
 		(Presenta no)
 	)
-	(Psicotico
+?Psicotico <- (Psicotico
 		(AlteracionesDuranteDelirum no)
+		(TrastornoPsicoticoDebidoAEnfermedad ?TEnf&~si)
 	)	
 	
 )
 	=>
-	(assert 
-		(Psicotico
-			(TrastornoPsicoticoDebidoAEnfermedad si)
-		)
-	)
+	(modify ?Psicotico (TrastornoPsicoticoDebidoAEnfermedad si))
+	(modify ?Paciente (PoseeTrastorno si))
 )
