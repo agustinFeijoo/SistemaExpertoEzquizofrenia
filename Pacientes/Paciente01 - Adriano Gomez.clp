@@ -53,6 +53,10 @@
 		(CantidadSintomas 0)
 	)
 
+	(Esquizofrenia
+		(Presenta nil)
+	)
+
 	(TipoDesorganizado
 		(Presenta no)
 	)

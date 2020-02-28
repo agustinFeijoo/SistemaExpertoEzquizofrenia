@@ -42,6 +42,10 @@
 		(ConcienteDeAlucinacionesPorSustancia no)
 		(EfectoExcesivo no)
 	)
+
+	(Esquizofrenia
+		(Presenta nil)
+	)
 	
 	(TipoCatatonico
 		(Presenta no)

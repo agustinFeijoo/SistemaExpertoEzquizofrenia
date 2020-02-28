@@ -1,4 +1,5 @@
 (defrule EstablecerTrastornoPsicoticoDebidoASustancias
+(declare (salience 500))
 (and
 ?Paciente<-(Paciente
 		(CumpleCriterioA si)

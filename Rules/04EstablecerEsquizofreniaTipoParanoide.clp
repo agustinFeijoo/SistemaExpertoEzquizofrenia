@@ -1,4 +1,5 @@
 (defrule EstablecerEsquizofreniaTipoParanoide
+(declare (salience 900))
 (and
 	(or
 	(Sintomas

@@ -1,4 +1,5 @@
 (defrule EstablecerEsquizofreniaTipoDesorganizado
+(declare (salience 900))
 (and
 	(Sintomas
 		(LenguajeDesorganizado si)
@@ -7,7 +8,7 @@
 		(AplanamientoAfectivo si)
 	)
 	(TipoCatatonico
-		(Presenta si)
+		(Presenta ?Pres&~si)
 	)
 	(Esquizofrenia
 		(Presenta si)

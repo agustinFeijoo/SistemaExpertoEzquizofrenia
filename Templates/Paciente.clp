@@ -1,5 +1,4 @@
 (deftemplate Paciente
-(field Fase)
 (field Duracion)
 (field PoseeTrastorno)
 (field Enfermedad)

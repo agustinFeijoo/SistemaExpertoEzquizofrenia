@@ -1,4 +1,5 @@
 (defrule EstablecerTrastornoPsicoticoCompartido
+(declare (salience 600))
 (and
 ?Paciente<-(Paciente
 		(CumpleCriterioA no)

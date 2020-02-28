@@ -18,6 +18,26 @@
 		)
 )
 
+(defrule Esq.Desorganizado
+	(declare (salience 10))
+
+	(Esquizofrenia (Presenta si))
+	(TipoDesorganizado (Presenta si))
+=>
+	(printout t crlf "El paciente presenta Esquizofrenia ")
+	(printout t crlf "del Tipo Desorganizado F20.1X")
+	(printout t crlf "Elija el ultimo digito segun corresponda:
+			.x2 Episodico con sintomas residuales interepisodicos
+			.x3 Episodico con sintomas residuales no interepisodicos
+			.x0 Continuo
+			.x4 Episodio unico en remision parcial
+			.x5 Episodio unico en remision total
+			.x8 Otro patron o no especificado
+			.x9 Menos de 1 año desde el inicio de los primeros sintomas de fase activa
+			"
+		)
+)
+
 (defrule Esq.Catatonico
 	(declare (salience 10))
 
@@ -210,6 +230,15 @@
 			")
 )
 
+(defrule Negativos
+	(declare (salience 100))
+
+?Esqui		<-(Esquizofrenia (Presenta nil))
+?Paciente	<-(Paciente (PoseeTrastorno nil))
+=>
+	(modify ?Esqui (Presenta no))
+	(modify ?Paciente (PoseeTrastorno no))
+)
 
 (defrule Indefinido
 	(declare (salience 5))

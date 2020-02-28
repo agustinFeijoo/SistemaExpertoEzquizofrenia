@@ -1,4 +1,5 @@
 (defrule EstablecerTrastornoPsicoticoBreve
+(declare (salience 700))
 (and
 ?Paciente<-(Paciente
 		(PoseeTrastorno nil)

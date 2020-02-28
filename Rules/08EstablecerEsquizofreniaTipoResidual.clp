@@ -1,8 +1,6 @@
 (defrule EstablecerEsquizofreniaTipoResidual
+(declare (salience 900))
 (and
-	(Paciente
-		(CumpleCriterioA si)
-	)
 	(or
 	(Sintomas
 		(CantidadSintomas ?CSintomas & :(> ?CSintomas 1))

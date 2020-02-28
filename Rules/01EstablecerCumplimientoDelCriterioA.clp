@@ -9,7 +9,7 @@
            (Sintomas
                   (CantidadSintomas 1)
                   (IdeasDelirantes si)
-                  (TipoIdeasDelirantes extranas)
+                  (TipoIdeasDelirantes EXTRANAS)
                   (DuracionSintoma ?DSintoma & :(> ?DSintoma 15))
                   (Atenuados no))  
 	  (Sintomas

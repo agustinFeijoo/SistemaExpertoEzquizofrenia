@@ -44,6 +44,10 @@
 		(EfectoExcesivo no)
 	)
 	
+	(Esquizofrenia
+		(Presenta nil)
+	)
+	
 	(TipoCatatonico
 		(Presenta no)
 		(InmovilidadCataplesiaOStupor no)

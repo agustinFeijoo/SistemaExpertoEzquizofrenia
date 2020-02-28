@@ -1,4 +1,5 @@
 (defrule EstablecerEsquizofreniaTipoCatatonico
+(declare (salience 900))
 (and
 	(Esquizofrenia
 		(Presenta si)

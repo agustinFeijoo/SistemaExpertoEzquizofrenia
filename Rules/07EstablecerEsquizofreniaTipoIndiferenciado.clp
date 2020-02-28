@@ -1,4 +1,5 @@
 (defrule EstablecerEsquizofreniaTipoIndiferenciado
+(declare (salience 900))
 (and
 	(Esquizofrenia
 		(Presenta si)
