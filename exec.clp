@@ -1,7 +1,7 @@
 (deffunction exec()
 
 	(loadTemplates)
-	(load "Pacientes/Paciente04 - Doug Narinas.clp")
+	(load "Pacientes/Paciente02 - Ariel Fuccini.clp")
 	(loadRules)
 
 )

@@ -1,5 +1,5 @@
 ﻿(defrule EstablecerCumplimientoCriterioA
-	;(declare (salience 1000))
+	(declare (salience 950))
 	
 	(Paciente (CumpleCriterioA nil))
 

@@ -231,7 +231,7 @@
 )
 
 (defrule Negativos
-	(declare (salience 100))
+	(declare (salience 7))
 
 ?Esqui		<-(Esquizofrenia (Presenta nil))
 ?Paciente	<-(Paciente (PoseeTrastorno nil))

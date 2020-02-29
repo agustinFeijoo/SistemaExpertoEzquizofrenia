@@ -3,7 +3,8 @@
 (and
 ?Paciente<-(Paciente
 		(CumpleCriterioA si)
-		(Limpio si)
+		(Limpio ?Limpi&~si)
+		(Drogas si)
 		(PoseeTrastorno ?PTras&~si)
 	)
 	(or
